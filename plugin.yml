@@ -1,0 +1,11 @@
+main: me.spaicygaming.rankgui.RankGui
+author: Chase
+softdepend: [Vault, PermissionsEx]
+
+name: Chase
+version: 1.2
+
+commands:
+  rankgui:
+    description: Main command.
+    aliases: [buyrank, buyranks]
