@@ -1,0 +1,78 @@
+# RankGui plugin by SpaicyGaming.
+
+#The cost MUST be an ENTIRE NUMBER and NOT decimal.
+Inventory:
+  name: "& a & lBuy Ranks"
+  itemsMaterial: DIAMOND_CHESTPLATE
+  # multiples of 9
+  size: 45
+
+# The command that will be executed from the console to the purchase of a rankCommand rank
+: "pex user {player} parent add {pex_name} "
+
+# Objects in inventory
+Items:
+  rank1:    
+    pexName: rank1
+    name: '& b & lRank1'
+    cost: 100
+    # Inventory position
+    invPosition: 18
+  rank2:    
+    pexName: rank2
+    name: '& b & lRank2'
+    cost: 1000
+    invPosition: 19
+  rank3:    
+    pexName: rank3
+    name: '& b & lRank3'
+    cost: 10000
+    invPosition: 20
+  rank4:    
+    pexName: rank4
+    name: '& b & lRank4'
+    cost: 100000
+    invPosition: 21
+  rank5:    
+    pexName: rank5
+    name: '& b & lRank5'
+    cost: 1000000
+    invPosition: 22
+#
+# The lores of the items in the
+# PlaceHolders:
+# {price} -> The cost of the rank
+# {pex_name} -> The name of the pex
+# {name} -> The name of the item
+ItemsLores:
+- ""
+- "& bRank: {pex_name}"
+- "& cPrice { price} $ "
+
+ConfirmGui:
+  title:" & b & lConfirmation Purchase "
+  confirm:
+    name:" &a&lConfirm "
+    lore:
+    -" &7Click me to confirm "
+    -" &7the purchase "
+  cancel:
+    name:" &c&lAnnulla "
+    lore:
+    - "& 7Click me to cancel"
+    - "& 7l 'purchase"
+  sign:
+    name: "& bStai to buy:"
+    lore:
+    - "& 7Rank: {pex}"
+    - "& 7 Cost: {cost} $"
+
+Messages:
+  prefix: "& 7 [ & c & lRegister & 7] & r "
+  noPerms:" & cHe are sorry, you do not have permission to do so. "
+  notEnoughtMoney: '& cI'm sorry, you do not have enough money!'
+  wrongUsage: "& cUse proper: / rankgui [reload]"
+  alreadyOwn: "& cYou can not buy this rank, you already have it!"
+  actionCancelled: "& purchase canceled successfully."
+  pexBought: '& aComplimenti! You have correctly purchased the rank {pex} & aper & l {cost} $! '
+
